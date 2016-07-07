@@ -27,6 +27,7 @@ io.on('connection', (socket) => {
 			return;
 		}
 		// let cmd = `cd /Users/loye/Documents/gome/venus-csh-web && git checkout dev && git pull origin dev && git checkout -b test-${Date.now()} && npm run buildall`;
+		// test cmd: delete node_module and install again, also, send exec stdout to browser real time
 		let cmd = `rm -rf ./node_modules && npm install -d`;
 		block = true;
 		const runInstance = exec(cmd);
